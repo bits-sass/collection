@@ -1,0 +1,6 @@
+{
+  "name": "bits-sass-collection",
+  "version": "0.1.0",
+  "author": "Lukáš Mladý",
+  "main": "_collection.scss"
+}
