@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Collection [component] - Bits.sass</title>
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="collection.css">
+    <link rel="stylesheet" href="form-control.css">
+    <link rel="stylesheet" href="group.css">
+    <link rel="stylesheet" href="space.css">
+    <style>
+      body { margin: 0 auto; width: 600px; background-color: #eee; }
+
+      .Thumbnail {
+        vertical-align: middle;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Collection component</h1>
+
+    <p>
+      Recommended to be used with <code>`u-gutter[T][s]`</code> utils. Add
+      <code>`Collection-item`</code> to
+      <code>`bits-space-gutter-supported-children`</code> variable first.
+    </p>
+
+    <h2>Collection of groups with `u-gutterHm`</h2>
+
+    <div class="bits-Collection bits-u-gutterHm">
+      <div class="bits-Collection-item">
+        <div class="bits-Group">
+          <div class="bits-Group-item">
+            <button class="bits-Button">My account</button>
+          </div>
+          <div class="bits-Group-item">
+            <button class="bits-Button">Settings</button>
+          </div>
+          <div class="bits-Group-item">
+            <button class="bits-Button">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bits-Collection-item">
+        <div class="bits-Group">
+          <div class="bits-Group-item">
+            <input class="bits-FormControl" type="text">
+          </div>
+          <div class="bits-Group-item">
+            <button class="bits-Button">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bits-Collection-item">
+        <div class="bits-Group">
+          <div class="bits-Group-item">
+            <button class="bits-Button">I'm alone</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Collection of thumbnails with `u-gutterAm`</h2>
+
+    <div class="bits-Collection bits-u-gutterAm">
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+    </div>
+
+    <h2>
+      Collection of thumbnails of various sizes with
+      <code>`Collection--middle` modifier</code>
+    </h2>
+
+    <div class="bits-Collection bits-Collection--middle bits-u-gutterAm">
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="" width="100" height="100">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/120/120" alt="" width="120" height="120">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/160/160" alt="" width="160" height="160">
+      </div>
+      <div class="bits-Collection-item">
+        <img class="Thumbnail" src="http://lorempixel.com/120/120" alt="" width="120" height="120">
+      </div>
+    </div>
+  </body>
+</html>

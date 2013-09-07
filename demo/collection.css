@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Collection
+   ========================================================================== */
+/**
+ * Simple component used to group items into a collection. Uses `inline-block`
+ * to better control its items' vertical and horizontal alignment.
+ *
+ * Example HTML:
+ *
+ * <div class="Collection">
+ *   <div class="Collection-item">
+ *     <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="">
+ *   </div>
+ *   <div class="Collection-item">
+ *     <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="">
+ *   </div>
+ *   <div class="Collection-item">
+ *     <img class="Thumbnail" src="http://lorempixel.com/100/100" alt="">
+ *   </div>
+ * </div>
+ *
+ */
+/* Variables
+   ========================================================================== */
+/**
+ * Bits.sass components namespace
+ */
+/* 1 */
+/* Component
+   ========================================================================== */
+/**
+ * Collection
+ *
+ * Accepts only `.Collection-item` as its children.
+ *
+ * 1. Remove inter-unit whitespace that appears between `inline-block` child
+ *    elements. Work for all non-monospace font-families.  If you're using a
+ *    monospace base font, you will need to set the `Collection` font-family to
+ *   `sans-serif` and then redeclare the monospace font on the `Collection-item`
+ *    objects.
+ * 2. Protect against WebKit bug with optimizelegibility
+ */
+.bits-Collection {
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: -0.31em;
+  /* 1 */
+  text-rendering: optimizespeed;
+  /* 2 */ }
+
+/**
+ * Hack to remove inter-child whitespace in Opera for Windows. All other
+ * supported browsers will drop the ruleset.
+ */
+.opera:-o-prefocus,
+.bits-Collection {
+  word-spacing: -0.43em; }
+
+/* Descendants
+   ========================================================================== */
+/**
+ * Collection item
+ *
+ * 1. Provide a consistent vertical alignment and avoid vertical whitespace in
+ *    the component.
+ * 2. Reset the text defaults altered in `.Collection`.
+ */
+.bits-Collection-item {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  /* 1 */
+  letter-spacing: normal;
+  /* 2 */
+  text-rendering: auto;
+  /* 2 */
+  word-spacing: normal;
+  /* 2 */ }
+
+/* Component modifiers
+   ========================================================================== */
+/**
+ * Horizontally center all collection items
+ *
+ * Allows for automatic item centering irrespective of the number of
+ * items in the collection.
+ */
+.bits-Collection--center {
+  text-align: center; }
+
+/* Control vertical alignment of collection items */
+.bits-Collection--middle > .bits-Collection-item {
+  vertical-align: middle; }
+
+.bits-Collection--bottom > .bits-Collection-item {
+  vertical-align: bottom; }

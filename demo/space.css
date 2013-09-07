@@ -1,0 +1,411 @@
+/* ==========================================================================
+   Spacing-specific utilities
+   ========================================================================== */
+/* Variables
+   ========================================================================== */
+/**
+ * Bits.sass utilities namespace
+ */
+/**
+ * Typically size of component spacing.
+ */
+/**
+ * Spacing (padding and margin)
+ *
+ * 1. Specifies list of generated <direction>s.
+ * 2. Specifies list of generated <size>s.
+ */
+/* 1 */
+/**
+ * Gutters
+ *
+ * 1. List of supported selectors.
+ *    You can use: `*`, `li` and any class name without a dot `.`
+ * 2. Specifies list of generated <type>s.
+ * 3. Specifies list of generated <size>s.
+ */
+/* 2 */
+/**
+ * Stretch
+ *
+ * 1. Specifies list of generated <type>s.
+ * 2. Specifies list of generated <size>s.
+ */
+/* 1 */
+/* Margin collapsing
+   ========================================================================== */
+/**
+ * Collapse first child's top margin
+ *
+ * Use margin collapsing to ensure proper spacing between the first child
+ * and parent's top padding.
+ *
+ * See http://codepen.io/thejameskyle/details/pthGd for more.
+ *
+ * Example HTML:
+ *
+ * <style>
+ *   .Module { padding: 20px; }
+ *   p { margin-top: 20px; }
+ * </style>
+ *
+ * <div class="Module u-collapseTop">
+ *   <p>
+ *     ...
+ *   </p>
+ *
+ *   <p>
+ *     ...
+ *   </p>
+ * </div>
+ */
+.bits-u-collapseTop {
+  padding-top: 0 !important; }
+  .bits-u-collapseTop:before {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-bottom: 19px; }
+
+/**
+ * Collapse last child's bottom margin
+ *
+ * Use margin collapsing to ensure proper spacing between the last child
+ * and parent's bottom padding.
+ *
+ * See http://codepen.io/thejameskyle/details/pthGd for more.
+ *
+ * Example HTML:
+ *
+ * <style>
+ *   .Module { padding: 20px; }
+ *   p { margin-bottom: 20px; }
+ * </style>
+ *
+ * <div class="Module u-collapseBottom">
+ *   <p>
+ *     ...
+ *   </p>
+ *
+ *   <p>
+ *     ...
+ *   </p>
+ * </div>
+ */
+.bits-u-collapseBottom {
+  padding-bottom: 0 !important; }
+  .bits-u-collapseBottom:after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: 19px; }
+
+/* Spacing
+   ========================================================================== */
+/**
+ * Use to adjust the default spacing between components.
+ *
+ * IMPORTANT: Use with great care!
+ *
+ * u-margin<DIRECTION><size>
+ * u-padding<DIRECTION><size>
+ *
+ * A = all
+ * T = top
+ * R = right
+ * B = bottom
+ * L = left
+ * H = horizontal
+ * V = vertical
+ *
+ * n = none
+ * s = small
+ * m = medium
+ * l = large
+ *
+ * Example HTML:
+ *
+ * <div class="Module u-marginBn u-paddingAm">
+ *   ...
+ * </div>
+ */
+/* Gutters
+   ========================================================================== */
+/**
+ * Use to insert gutter inbetween element's children.
+ *
+ * u-gutter<TYPE><size>
+ *
+ * A = all
+ * H = horizontal
+ * V = vertical
+ *
+ * s = small
+ * m = medium
+ * l = large
+ *
+ * Example HTML:
+ *
+ * <ul class="Grid Grid--2col u-gutterHm">
+ *   <li class="Grid-cell u-gutter-item">
+ *     ...
+ *   </li>
+ *   <li class="Grid-cell u-gutter-item">
+ *     ...
+ *   </li>
+ *
+ *   ...
+ *
+ * </ul>
+ */
+/* Stretching
+   ========================================================================== */
+/**
+ * Use to stretch the element to side / up and down OR all sides
+ *
+ * u-stretch<TYPE><size>
+ *
+ * A = all
+ * H = horizontal
+ * V = vertical
+ *
+ * s = small
+ * m = medium
+ * l = large
+ *
+ * Example HTML:
+ *
+ * <div class="IHaveSomePadding">
+ *   <div class="u-stretchHm">
+ *     ...
+ *   </div>
+ * </div>
+ */
+/* Utilities generator
+   ========================================================================== */
+/**
+ * Unique list of all sizes (letter + value combination)
+ */
+/**
+ * Sanitize spacing sizes
+ */
+/**
+ * Sanitize gutter sizes
+ */
+/**
+ * Sanitize stretch sizes
+ */
+/* -------------------------------------------------------------------------- */
+/**
+ * Merge all possible size combinations
+ */
+/**
+ * Move 0 value (if there is some) to be the last due to specifity issues
+ */
+/* -------------------------------------------------------------------------- */
+/**
+ * Make an array of all packages
+ */
+/**
+ * Margins
+ */
+.bits-u-marginAs, .bits-u-marginVs, .bits-u-marginTs {
+  margin-top: 5px !important; }
+
+.bits-u-marginAs, .bits-u-marginHs, .bits-u-marginRs {
+  margin-right: 5px !important; }
+
+.bits-u-marginAs, .bits-u-marginVs, .bits-u-marginBs {
+  margin-bottom: 5px !important; }
+
+.bits-u-marginAs, .bits-u-marginHs, .bits-u-marginLs {
+  margin-left: 5px !important; }
+
+/**
+ * Paddings
+ */
+.bits-u-paddingAs, .bits-u-paddingVs, .bits-u-paddingTs, .bits-u-gutterAm > .bits-u-gutter-item, .bits-u-gutterAm > .bits-Collection-item, .bits-u-gutterVm > .bits-u-gutter-item, .bits-u-gutterVm > .bits-Collection-item {
+  padding-top: 5px !important; }
+
+.bits-u-paddingAs, .bits-u-paddingHs, .bits-u-paddingRs, .bits-u-gutterAm > .bits-u-gutter-item, .bits-u-gutterAm > .bits-Collection-item, .bits-u-gutterHm > .bits-u-gutter-item, .bits-u-gutterHm > .bits-Collection-item {
+  padding-right: 5px !important; }
+
+.bits-u-paddingAs, .bits-u-paddingVs, .bits-u-paddingBs, .bits-u-gutterAm > .bits-u-gutter-item, .bits-u-gutterAm > .bits-Collection-item, .bits-u-gutterVm > .bits-u-gutter-item, .bits-u-gutterVm > .bits-Collection-item {
+  padding-bottom: 5px !important; }
+
+.bits-u-paddingAs, .bits-u-paddingHs, .bits-u-paddingLs, .bits-u-gutterAm > .bits-u-gutter-item, .bits-u-gutterAm > .bits-Collection-item, .bits-u-gutterHm > .bits-u-gutter-item, .bits-u-gutterHm > .bits-Collection-item {
+  padding-left: 5px !important; }
+
+/**
+ * Margins
+ */
+.bits-u-marginAm, .bits-u-marginVm, .bits-u-marginTm {
+  margin-top: 10px !important; }
+
+.bits-u-marginAm, .bits-u-marginHm, .bits-u-marginRm {
+  margin-right: 10px !important; }
+
+.bits-u-marginAm, .bits-u-marginVm, .bits-u-marginBm {
+  margin-bottom: 10px !important; }
+
+.bits-u-marginAm, .bits-u-marginHm, .bits-u-marginLm {
+  margin-left: 10px !important; }
+
+/**
+ * Paddings
+ */
+.bits-u-paddingAm, .bits-u-paddingVm, .bits-u-paddingTm, .bits-u-gutterAl > .bits-u-gutter-item, .bits-u-gutterAl > .bits-Collection-item, .bits-u-gutterVl > .bits-u-gutter-item, .bits-u-gutterVl > .bits-Collection-item {
+  padding-top: 10px !important; }
+
+.bits-u-paddingAm, .bits-u-paddingHm, .bits-u-paddingRm, .bits-u-gutterAl > .bits-u-gutter-item, .bits-u-gutterAl > .bits-Collection-item, .bits-u-gutterHl > .bits-u-gutter-item, .bits-u-gutterHl > .bits-Collection-item {
+  padding-right: 10px !important; }
+
+.bits-u-paddingAm, .bits-u-paddingVm, .bits-u-paddingBm, .bits-u-gutterAl > .bits-u-gutter-item, .bits-u-gutterAl > .bits-Collection-item, .bits-u-gutterVl > .bits-u-gutter-item, .bits-u-gutterVl > .bits-Collection-item {
+  padding-bottom: 10px !important; }
+
+.bits-u-paddingAm, .bits-u-paddingHm, .bits-u-paddingLm, .bits-u-gutterAl > .bits-u-gutter-item, .bits-u-gutterAl > .bits-Collection-item, .bits-u-gutterHl > .bits-u-gutter-item, .bits-u-gutterHl > .bits-Collection-item {
+  padding-left: 10px !important; }
+
+/**
+ * Margins
+ */
+.bits-u-marginAl, .bits-u-marginVl, .bits-u-marginTl {
+  margin-top: 20px !important; }
+
+.bits-u-marginAl, .bits-u-marginHl, .bits-u-marginRl {
+  margin-right: 20px !important; }
+
+.bits-u-marginAl, .bits-u-marginVl, .bits-u-marginBl {
+  margin-bottom: 20px !important; }
+
+.bits-u-marginAl, .bits-u-marginHl, .bits-u-marginLl {
+  margin-left: 20px !important; }
+
+/**
+ * Paddings
+ */
+.bits-u-paddingAl, .bits-u-paddingVl, .bits-u-paddingTl {
+  padding-top: 20px !important; }
+
+.bits-u-paddingAl, .bits-u-paddingHl, .bits-u-paddingRl {
+  padding-right: 20px !important; }
+
+.bits-u-paddingAl, .bits-u-paddingVl, .bits-u-paddingBl {
+  padding-bottom: 20px !important; }
+
+.bits-u-paddingAl, .bits-u-paddingHl, .bits-u-paddingLl {
+  padding-left: 20px !important; }
+
+/**
+ * Margins
+ */
+.bits-u-gutterAs, .bits-u-gutterVs {
+  margin-top: -3px !important; }
+
+.bits-u-gutterAs, .bits-u-gutterHs {
+  margin-right: -3px !important; }
+
+.bits-u-gutterAs, .bits-u-gutterVs {
+  margin-bottom: -3px !important; }
+
+.bits-u-gutterAs, .bits-u-gutterHs {
+  margin-left: -3px !important; }
+
+/**
+ * Paddings
+ */
+/**
+ * Margins
+ */
+/**
+ * Paddings
+ */
+.bits-u-gutterAs > .bits-u-gutter-item, .bits-u-gutterAs > .bits-Collection-item, .bits-u-gutterVs > .bits-u-gutter-item, .bits-u-gutterVs > .bits-Collection-item {
+  padding-top: 3px !important; }
+
+.bits-u-gutterAs > .bits-u-gutter-item, .bits-u-gutterAs > .bits-Collection-item, .bits-u-gutterHs > .bits-u-gutter-item, .bits-u-gutterHs > .bits-Collection-item {
+  padding-right: 3px !important; }
+
+.bits-u-gutterAs > .bits-u-gutter-item, .bits-u-gutterAs > .bits-Collection-item, .bits-u-gutterVs > .bits-u-gutter-item, .bits-u-gutterVs > .bits-Collection-item {
+  padding-bottom: 3px !important; }
+
+.bits-u-gutterAs > .bits-u-gutter-item, .bits-u-gutterAs > .bits-Collection-item, .bits-u-gutterHs > .bits-u-gutter-item, .bits-u-gutterHs > .bits-Collection-item {
+  padding-left: 3px !important; }
+
+/**
+ * Margins
+ */
+.bits-u-gutterAm, .bits-u-gutterVm {
+  margin-top: -5px !important; }
+
+.bits-u-gutterAm, .bits-u-gutterHm, .bits-u-stretchHs {
+  margin-right: -5px !important; }
+
+.bits-u-gutterAm, .bits-u-gutterVm {
+  margin-bottom: -5px !important; }
+
+.bits-u-gutterAm, .bits-u-gutterHm, .bits-u-stretchHs {
+  margin-left: -5px !important; }
+
+/**
+ * Paddings
+ */
+/**
+ * Margins
+ */
+.bits-u-gutterAl, .bits-u-gutterVl {
+  margin-top: -10px !important; }
+
+.bits-u-gutterAl, .bits-u-gutterHl, .bits-u-stretchHm {
+  margin-right: -10px !important; }
+
+.bits-u-gutterAl, .bits-u-gutterVl {
+  margin-bottom: -10px !important; }
+
+.bits-u-gutterAl, .bits-u-gutterHl, .bits-u-stretchHm {
+  margin-left: -10px !important; }
+
+/**
+ * Paddings
+ */
+/**
+ * Margins
+ */
+.bits-u-stretchHl {
+  margin-right: -20px !important; }
+
+.bits-u-stretchHl {
+  margin-left: -20px !important; }
+
+/**
+ * Paddings
+ */
+/**
+ * Margins
+ */
+.bits-u-marginAn, .bits-u-marginVn, .bits-u-marginTn, .bits-u-gutterAn, .bits-u-gutterVn {
+  margin-top: 0 !important; }
+
+.bits-u-marginAn, .bits-u-marginHn, .bits-u-marginRn, .bits-u-gutterAn, .bits-u-gutterHn {
+  margin-right: 0 !important; }
+
+.bits-u-marginAn, .bits-u-marginVn, .bits-u-marginBn, .bits-u-gutterAn, .bits-u-gutterVn {
+  margin-bottom: 0 !important; }
+
+.bits-u-marginAn, .bits-u-marginHn, .bits-u-marginLn, .bits-u-gutterAn, .bits-u-gutterHn {
+  margin-left: 0 !important; }
+
+/**
+ * Paddings
+ */
+.bits-u-paddingAn, .bits-u-paddingVn, .bits-u-paddingTn, .bits-u-gutterAn > .bits-u-gutter-item, .bits-u-gutterAn > .bits-Collection-item, .bits-u-gutterVn > .bits-u-gutter-item, .bits-u-gutterVn > .bits-Collection-item {
+  padding-top: 0 !important; }
+
+.bits-u-paddingAn, .bits-u-paddingHn, .bits-u-paddingRn, .bits-u-gutterAn > .bits-u-gutter-item, .bits-u-gutterAn > .bits-Collection-item, .bits-u-gutterHn > .bits-u-gutter-item, .bits-u-gutterHn > .bits-Collection-item {
+  padding-right: 0 !important; }
+
+.bits-u-paddingAn, .bits-u-paddingVn, .bits-u-paddingBn, .bits-u-gutterAn > .bits-u-gutter-item, .bits-u-gutterAn > .bits-Collection-item, .bits-u-gutterVn > .bits-u-gutter-item, .bits-u-gutterVn > .bits-Collection-item {
+  padding-bottom: 0 !important; }
+
+.bits-u-paddingAn, .bits-u-paddingHn, .bits-u-paddingLn, .bits-u-gutterAn > .bits-u-gutter-item, .bits-u-gutterAn > .bits-Collection-item, .bits-u-gutterHn > .bits-u-gutter-item, .bits-u-gutterHn > .bits-Collection-item {
+  padding-left: 0 !important; }
